@@ -34,14 +34,14 @@ public class FactoryTest {
 	
 	@Test
 	public void testIfFactoryCreatedAnInstanceOfText() {
-		ITest number = factory.create("Text");
-		verify(number, Text.class);
+		ITest text = factory.create("Text");
+		verify(text, Text.class);
 	}
 	
 	@Test
 	public void testIfFactoryCreatedAnInstanceOfBoolean() {
-		ITest number = factory.create(true);
-		verify(number, Bool.class);
+		ITest bool = factory.create(true);
+		verify(bool, Bool.class);
 	}
 	
 	@Test(expected = NullPointerException.class)
